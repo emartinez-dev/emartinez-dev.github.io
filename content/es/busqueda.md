@@ -1,0 +1,4 @@
+---
+title: "Búsqueda"
+layout: search
+---
