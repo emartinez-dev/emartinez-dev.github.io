@@ -1,0 +1,170 @@
+baseURL: "https://emartinez.net/"
+paginate: 5
+theme: PaperMod
+
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+googleAnalytics: G-794QH4SNC9
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+defaultContentLanguage: es
+defaultContentLanguageInSubdir: true
+languages:
+  es:
+    contentDir: content/es
+    disabled: false
+    languageCode: es-ES
+    languageDirection: ltr
+    languageName: Spanish
+    title: "Enrique Martínez | Desarrollador de software"
+    description: "Desarrollador de software, hacedor de cosas y amante de la tecnología, actualmente estudiando en 42"
+    weight: 1
+    params:
+      profileMode:
+        enabled: true # needs to be explicitly set
+        title: Enrique Martínez
+        subtitle: "Desarrollador de software, hacedor de cosas y amante de la tecnología, actualmente estudiando en 42"
+        imageUrl: "bio-photo.jpg"
+        imageWidth: 240
+        imageHeight: 240
+        buttons:
+          - name: Artículos
+            url: posts
+          - name: Categorías
+            url: categories
+    menu:
+      main:
+        - identifier: categories
+          name: Categorías
+          url: /categories/
+          weight: 10
+        - identifier: tags
+          name: Tags
+          url: /tags/
+          weight: 20
+        - identifier: sobre-mi
+          name: Sobre mi
+          url: /sobre-mi
+          weight: 30
+
+  en:
+    contentDir: content/en
+    disabled: false
+    languageCode: en-US
+    languageDirection: ltr
+    languageName: English
+    title: "Enrique Martínez | Software developer"
+    description: "Software developer, maker and tech lover based in Spain. Currently stuying at 42 School"
+    weight: 2
+    params:
+      profileMode:
+        enabled: true # needs to be explicitly set
+        title: Enrique Martínez
+        subtitle: "Software developer, maker and tech lover based in Spain. Currently stuying at 42 School"
+        imageUrl: "bio-photo.jpg"
+        imageWidth: 240
+        imageHeight: 240
+        buttons:
+          - name: Posts
+            url: posts
+          - name: Categories
+            url: categories
+    menu:
+      main:
+        - identifier: categories
+          name: Categories
+          url: /categories/
+          weight: 10
+        - identifier: tags
+          name: Tags
+          url: /tags/
+          weight: 20
+        - identifier: about-me
+          name: About me
+          url: /about-me
+          weight: 30
+
+params:
+  env: production
+  keywords: [Blog, Portfolio, Developer, Maker]
+  author: Enrique Martínez
+  images: "./static/bio-photo.jpg"
+  DateFormat: "2 January, 2006"
+  defaultTheme: auto
+  disableThemeToggle: false
+
+  ShowReadingTime: true
+  ShowShareButtons: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowWordCount: true
+  ShowRssButtonInSectionTermList: true
+  UseHugoToc: true
+  disableSpecial1stPost: false
+  disableScrollToTop: false
+  comments: false
+  hidemeta: false
+  hideSummary: false
+  showtoc: false
+  tocopen: false
+
+  assets:
+    # disableHLJS: true # to disable highlight.js
+    # disableFingerprinting: true
+    favicon: "favicon.ico"
+    favicon16x16: "favicon-16x16.png"
+    favicon32x32: "favicon-32x32.png"
+    apple_touch_icon: "apple-touch-icon.png"
+    safari_pinned_tab: "safari-pinned-tab.svg"
+
+  label:
+    text: "Enrique Martínez"
+    icon: apple-touch-icon.png
+    iconHeight: 24
+
+  socialIcons:
+    - name: twitter
+      url: "https://twitter.com/emartinez-dev"
+    - name: github
+      url: "https://github.com/emartinez-dev"
+    - name: linkedin
+      url: "https://www.linkedin.com/in/f-enrique-martinez/"
+
+  analytics:
+    google:
+      SiteVerificationTag: "G-794QH4SNC9"
+    bing:
+      #SiteVerificationTag: "XYZabc"
+
+  cover:
+    hidden: true # hide everywhere but not in structured data
+    hiddenInList: true # hide on list pages and home
+    hiddenInSingle: true # hide on single page
+
+  # for search
+  # https://fusejs.io/api/options.html
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    keys: ["title", "permalink", "summary", "content"]
+# Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
+pygmentsUseClasses: true
+markup:
+  highlight:
+    noClasses: false
+    # anchorLineNos: true
+    # codeFences: true
+    # guessSyntax: true
+    # lineNos: true
+    # style: monokai
