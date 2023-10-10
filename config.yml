@@ -38,8 +38,8 @@ languages:
         title: Enrique Martínez
         subtitle: "Desarrollador de software, hacedor de cosas y amante de la tecnología, actualmente estudiando en 42"
         imageUrl: "bio-photo.jpg"
-        imageWidth: 240
-        imageHeight: 240
+        imageWidth: 120
+        imageHeight: 120
         buttons:
           - name: Artículos
             url: posts
@@ -79,8 +79,8 @@ languages:
         title: Enrique Martínez
         subtitle: "Software developer, maker and tech lover based in Spain. Currently stuying at 42 School"
         imageUrl: "bio-photo.jpg"
-        imageWidth: 240
-        imageHeight: 240
+        imageWidth: 120
+        imageHeight: 120
         buttons:
           - name: Posts
             url: posts

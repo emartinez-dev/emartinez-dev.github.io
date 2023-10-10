@@ -1,3 +1,51 @@
 body {
     transition: background-color 1.0s ease-out, color 1.0s ease-out;
 }
+
+.main-custom {
+    position: relative;
+    min-height: calc(100vh - var(--header-height) - var(--footer-height));
+    padding: 0 var(--gap);
+    /* 
+	margin: auto; 
+    max-width: calc(var(--main-width) + var(--gap) * 8);
+	 */
+}
+
+.split-container {
+  display: flex;
+  align-items: center;
+  /*height: 100vh;  /* Adjust height if necessary */
+}
+
+.right-section {
+  flex: 2;  /* Adjust flex value to control width */
+  padding: 20px;
+}
+
+@media (max-width: 768px) {
+  .split-container {
+    flex-direction: column;
+  }
+  .nav {
+	justify-content: space-around;
+ }
+}
+
+
+.profile-section {
+	flex: 1;  /* Adjust flex value to control width */
+    padding: 20px; /* Inner spacing */
+    margin: 10px; /* Outer spacing */
+    max-width: 300px; /* Optional: Sets a maximum width */
+    width: 100%; /* Takes full width up to the max-width */
+}
+
+.profile-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center; /* Aligns text to the center */
+    height: 100%; /* Optional: set to 100% if the container's height is fixed or set by a parent element */
+}
