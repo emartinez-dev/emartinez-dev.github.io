@@ -4,10 +4,12 @@ categories: ["personal"]
 tags: ["personal"]
 ShowToc: true
 TocOpen: false
+cover:
+    image: "/Hello_World_Brian_Kernighan_1978.jpg"
+    alt: "Un programa Hello world escrito por Brian Kernighan en 1978"
+    caption: "Un programa Hello world escrito por Brian Kernighan en 1978"
+    relative: true 
 ---
-
-![Un programa Hello world escrito por Brian Kernighan en
-1978](/Hello_World_Brian_Kernighan_1978.jpg)
 
 Llevo mucho tiempo pensando en crear un blog para desarrolladores y escribir
 artículos técnicos, pero siempre he tenido la sensación de que no sabía nada o

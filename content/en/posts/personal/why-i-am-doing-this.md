@@ -4,10 +4,12 @@ categories: ["personal"]
 tags: ["personal"]
 ShowToc: true
 TocOpen: false
+cover:
+    image: "/Hello_World_Brian_Kernighan_1978.jpg"
+    alt: "Hello world program written by Brian Kernighan in 1978"
+    caption: "Hello world program written by Brian Kernighan in 1978"
+    relative: true 
 ---
-
-![Hello world program written by Brian Kernighan in
-1978](/Hello_World_Brian_Kernighan_1978.jpg)
 
 I have been thinking about creating a developer blog and writing technical
 articles for a long time, but I have always felt that I didn't know anything
