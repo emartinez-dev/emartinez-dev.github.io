@@ -1,3 +1,7 @@
+.tag-entry .entry-cover {
+    display: block;
+}
+
 body {
     transition: background-color 1.0s ease-out, color 1.0s ease-out;
 }
