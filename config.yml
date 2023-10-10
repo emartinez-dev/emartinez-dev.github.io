@@ -17,11 +17,11 @@ defaultContentLanguage: es
 defaultContentLanguageInSubdir: true
 languages:
   es:
+    languageName: ":es:"
     contentDir: content/es
     disabled: false
-    languageCode: es-ES
+    languageCode: "es-ES"
     languageDirection: ltr
-    languageName: Spanish
     title: "Enrique Martínez | Desarrollador de software"
     description: "Desarrollador de software, hacedor de cosas y amante de la tecnología, actualmente estudiando en 42"
     weight: 1
@@ -54,11 +54,11 @@ languages:
           weight: 30
 
   en:
+    languageName: ":gb:"
     contentDir: content/en
     disabled: false
-    languageCode: en-US
+    languageCode: "en-US"
     languageDirection: ltr
-    languageName: English
     title: "Enrique Martínez | Software developer"
     description: "Software developer, maker and tech lover based in Spain. Currently stuying at 42 School"
     weight: 2
@@ -98,6 +98,7 @@ params:
   DateFormat: "2 January, 2006"
   defaultTheme: auto
   disableThemeToggle: false
+  displayFullLangName: true
 
   ShowReadingTime: true
   ShowShareButtons: true
