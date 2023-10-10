@@ -8,6 +8,7 @@ buildFuture: false
 buildExpired: false
 
 googleAnalytics: G-794QH4SNC9
+disqusShortname: "emartinez"
 
 minify:
   disableXML: true
@@ -124,7 +125,7 @@ params:
   UseHugoToc: true
   disableSpecial1stPost: false
   disableScrollToTop: false
-  comments: false
+  comments: true
   hidemeta: false
   hideSummary: false
   showtoc: false
