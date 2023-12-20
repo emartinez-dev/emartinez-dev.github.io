@@ -13,7 +13,7 @@ cover:
 
 En uno de los proyectos de 42, se nos da una iniciación al mundo de los gráficos en 3D a través del proyecto FdF, las sigas de 'fil de fer' en francés, que significa wireframe model en inglés y modelo de estructura alámbrica en español.
 
-En este proyecto se nos pide que a través de un archivo de texto y haciendo uso de la librería gráfica de la escuela, MLX42, leamos un mapa donde cada coordenada tiene el valor de su altura, y lo representemos gráficamente en 3D, con un formato como este:
+En este proyecto se nos pide que a través de un archivo de texto y haciendo uso de la librería gráfica de la escuela, [MLX42](https://github.com/codam-coding-college/MLX42), leamos un mapa donde cada coordenada tiene el valor de su altura, y lo representemos gráficamente en 3D, con un formato como este:
 
 ```shell
 $> cat 42.fdf
@@ -32,7 +32,7 @@ $> cat 42.fdf
 
 ```
 
-Como preaviso, en 42 tenemos **la Norma**, varias reglas comunes para casi todos los proyectos, como por ejemplo que las funciones tienen que tener menos de 25 líneas y cada línea menos de 80 caracteres. Por este motivo, a veces he tenido que sacrificar la estructura o legibilidad del programa.
+Como preaviso, en 42 tenemos **[la Norma](https://github.com/MagicHatJo/-42-Norm/blob/master/norme.en.pdf)**, varias reglas comunes para casi todos los proyectos, como por ejemplo que las funciones tienen que tener menos de 25 líneas y cada línea menos de 80 caracteres. Por este motivo, a veces he tenido que sacrificar la estructura o legibilidad del programa.
 
 ## ¿Qué es un wireframe?
 
@@ -40,7 +40,7 @@ Un wireframe es un algoritmo para renderizar objetos en 3D en el que solamente s
 
 Ejemplo:
 
-![42 map file](images/42%20logo.png "42 map")
+![42 map file](/images/42%20logo.png "42 map")
 
 ## Arquitectura de la solución
 
@@ -264,28 +264,28 @@ mlx_loop_hook(fdf->mlx, &movement_hook, fdf);
 ## Resultado final
 
 ### Mapas
-![Colores](images/colors.png)
-![Marte](images/marte.png)
-![montaña](images/montaña.png)
-![fractal](images/fractal.png)
+![Colores](/images/colors.png)
+![Marte](/images/marte.png)
+![montaña](/images/montaña.png)
+![fractal](/images/fractal.png)
 
 ### Zoom
-![zoom test](images/zoom.gif "zoom test")
+![zoom test](/images/zoom.gif "zoom test")
 
 ### Rotaciones
-![rotation test](images/rotations.gif "rotation test")
+![rotation test](/images/rotations.gif "rotation test")
 
 ### Movimiento
-![movement test](images/movement.gif "movement test")
+![movement test](/images/movement.gif "movement test")
 
 ### Ajustes en la escala de Z
-![zscale test](images/zscale.gif "zscale test")
+![zscale test](/images/zscale.gif "zscale test")
 
 ### Otros tipos de proyección
-![projections test](images/projections.gif "projections test")
+![projections test](/images/projections.gif "projections test")
 
 ### Bonus: modo arcoiris!
-![bonus test](images/bonus.gif "bonus test")
+![bonus test](/images/bonus.gif "bonus test")
 
 ## Conclusión
 Ha sido un proyecto muy satisfactorio, la programación de gráficos es de las cosas más gratificantes que hay, ya vas viendo la evolución de tu programa según pasan los días, y pasas de pintar puntos individuales a imágenes completas.
