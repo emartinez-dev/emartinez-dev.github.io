@@ -1,7 +1,7 @@
 ---
 title:  "Programación gráfica: creando un renderizador 3D en C"
 categories: ["proyectos"]
-tags: ["gráficos", "3D", "42"]
+tags: ["gráficos", "3D", "42", "fdf"]
 ShowToc: true
 TocOpen: false
 cover:
@@ -11,7 +11,9 @@ cover:
     relative: true 
 ---
 
-En uno de los proyectos de 42, se nos da una iniciación al mundo de los gráficos en 3D a través del proyecto FdF, las sigas de 'fil de fer' en francés, que significa wireframe model en inglés y modelo de estructura alámbrica en español.
+**Código fuente del proyecto**: [FdF](https://github.com/emartinez-dev/fdf)
+
+En uno de los proyectos de 42, se nos da una iniciación al mundo de los gráficos en 3D a través del proyecto FdF, las sigas de 'fil de fer' en francés, que significa **wireframe model** en inglés y modelo de estructura alámbrica en español.
 
 En este proyecto se nos pide que a través de un archivo de texto y haciendo uso de la librería gráfica de la escuela, [MLX42](https://github.com/codam-coding-college/MLX42), leamos un mapa donde cada coordenada tiene el valor de su altura, y lo representemos gráficamente en 3D, con un formato como este:
 
@@ -60,7 +62,7 @@ typedef struct s_point
 
 Ahora vamos con la estructura para el mapa. Necesitamos almacenar el resto de información, el conjunto de puntos 3D, el alto y ancho del mapa, y otros dos valores útiles como el menor y mayor valor de Z, que nos permitirán escalar el mapa para poder dibujarlo completo en la pantalla. 
 
-En un principio elegí representar los puntos como un array bidimensional, pero es mucho más rápido si lo hacemos en un array de una dimensión. [Referencia](https://stackoverflow.com/questions/17259877/1d-or-2d-array-whats-faster)
+En un principio elegí representar los puntos como un array bidimensional, pero es mucho más rápido si lo hacemos en un array de una dimensión.[1]
 
 ```c
 typedef struct s_map
@@ -293,3 +295,5 @@ Ha sido un proyecto muy satisfactorio, la programación de gráficos es de las c
 También es más complicado de debuggear, ya que para renderizar una imagen de 1000x1000 píxeles se llama a la función `bresenham` más de 2 millones de veces, y al trabajar con números de coma flotante, a veces ocurren problemas que se escapan a nuestro control.
 
 Ha sido una gran experiencia y por fin he utilizado la trigonometría que aprendí en cuarto de la ESO, sabía que este día llegaría!
+
+[1]: https://stackoverflow.com/questions/17259877/1d-or-2d-array-whats-faster

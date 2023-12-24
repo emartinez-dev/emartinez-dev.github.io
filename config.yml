@@ -17,8 +17,6 @@ minify:
 outputs:
     home:
         - HTML
-        - RSS
-        - JSON
 
 defaultContentLanguage: es
 defaultContentLanguageInSubdir: true
@@ -29,7 +27,7 @@ languages:
     disabled: false
     languageCode: "es-ES"
     languageDirection: ltr
-    title: "Enrique Martínez | Desarrollador de software"
+    title: "Enrique Martínez"
     weight: 1
     params:
       description: "Desarrollador de software, hacedor de cosas y amante de la tecnología, actualmente estudiando en 42"
@@ -59,6 +57,10 @@ languages:
           name: Sobre mi
           url: /sobre-mi
           weight: 30
+        - identifier: contacto
+          name: Contacto
+          url: /contacto
+          weight: 31
         - identifier: busqueda
           name: Búsqueda
           url: /busqueda
@@ -70,7 +72,7 @@ languages:
     disabled: false
     languageCode: "en-US"
     languageDirection: ltr
-    title: "Enrique Martínez | Software developer"
+    title: "Enrique Martínez"
     weight: 2
     params:
       description: "Software developer, maker and tech lover based in Spain. Currently stuying at 42 School"
@@ -100,6 +102,10 @@ languages:
           name: About me
           url: /about-me
           weight: 30
+        - identifier: contact
+          name: Contact
+          url: /contact
+          weight: 31
         - identifier: search
           name: Search
           url: /search
@@ -107,7 +113,7 @@ languages:
 
 params:
   env: production
-  keywords: [Blog, Portfolio, Developer, Maker]
+  keywords: [Blog, Portfolio, Developer, Maker, Tech blog]
   author: Enrique Martínez
   images: "./static/bio-photo.jpg"
   DateFormat: "2 January, 2006"
@@ -121,7 +127,7 @@ params:
   ShowBreadCrumbs: true
   ShowCodeCopyButtons: true
   ShowWordCount: true
-  ShowRssButtonInSectionTermList: true
+  ShowRssButtonInSectionTermList: false
   UseHugoToc: true
   disableSpecial1stPost: false
   disableScrollToTop: false
