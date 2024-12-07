@@ -18,6 +18,7 @@ minify:
 outputs:
     home:
         - HTML
+        - JSON
 
 defaultContentLanguage: es
 defaultContentLanguageInSubdir: true
