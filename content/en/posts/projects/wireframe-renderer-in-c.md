@@ -2,6 +2,7 @@
 title:  "Graphics programming: creating a 3D renderer in C"
 categories: ["projects"]
 tags: ["graphics", "3D", "42", "fdf"]
+date: 2023-12-24T14:48:00+02:00
 ShowToc: true
 TocOpen: false
 cover:

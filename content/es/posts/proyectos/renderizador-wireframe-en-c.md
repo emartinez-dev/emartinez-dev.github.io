@@ -2,6 +2,7 @@
 title:  "Programación gráfica: creando un renderizador 3D en C"
 categories: ["proyectos"]
 tags: ["gráficos", "3D", "42", "fdf"]
+date: 2023-12-24T14:48:00+02:00
 ShowToc: true
 TocOpen: false
 cover:

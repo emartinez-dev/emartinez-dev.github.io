@@ -36,7 +36,6 @@ body {
  }
 }
 
-
 .profile-section {
 	flex: 1;  /* Adjust flex value to control width */
     padding: 20px; /* Inner spacing */
@@ -52,4 +51,8 @@ body {
     justify-content: center;
     text-align: center; /* Aligns text to the center */
     height: 100%; /* Optional: set to 100% if the container's height is fixed or set by a parent element */
+}
+
+.entry-content > p {
+  margin-bottom: 0.5rem;
 }

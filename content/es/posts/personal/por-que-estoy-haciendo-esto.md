@@ -2,6 +2,7 @@
 title:  "Por qué lo estoy haciendo (y porqué no lo hice antes)"
 categories: ["personal"]
 tags: ["personal"]
+date: 2023-10-10T20:14:08+02:00
 ShowToc: true
 TocOpen: false
 cover:

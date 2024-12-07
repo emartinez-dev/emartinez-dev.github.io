@@ -2,6 +2,7 @@
 title:  "Why I am doing this now (and why I didn't do it before)"
 categories: ["personal"]
 tags: ["personal"]
+date: 2023-10-10T20:14:08+02:00
 ShowToc: true
 TocOpen: false
 cover:

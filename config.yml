@@ -19,7 +19,7 @@ outputs:
     home:
         - HTML
         - JSON
-
+        - RSS
 defaultContentLanguage: es
 defaultContentLanguageInSubdir: true
 languages:
@@ -32,21 +32,29 @@ languages:
     title: "Enrique Martínez"
     weight: 1
     params:
-      description: "Desarrollador de software, hacedor de cosas y amante de la tecnología, actualmente estudiando en 42"
-      profileMode:
-        enabled: true # needs to be explicitly set
+      homeInfoParams:
         title: Enrique Martínez
-        subtitle: "Desarrollador de software, hacedor de cosas y amante de la tecnología, actualmente estudiando en 42"
-        imageUrl: "bio-photo.jpg"
-        imageWidth: 120
-        imageHeight: 120
-        buttons:
-          - name: Artículos
-            url: posts
-          - name: Proyectos
-            url: categories/proyectos/
+        subtitle: Junior Software Engineer
+        Content: |
+          **Bienvenido a mi blog!**
+
+          Soy Enrique, un ingeniero de software que cambió la gestión de empresas por la programación.
+
+          Después de descubrir mi pasión por la tecnología, aprendí desarrollo de software de forma
+          autodidacta y en la escuela 42 durante dos años. Ahora trabajo en el sector sector
+          aeroespacial, contribuyendo a proyectos que implican tecnología punta e impacto en el mundo real.
+
+          En este blog comparto mis ideas, experiencias y reflexiones sobre mi trayectoria en el
+          mundo del desarrollo de software. Tanto si eres un desarrollador, un entusiasta de la
+          tecnología o simplemente un curioso, espero que encuentres aquí algo valor o inspiración.
+      footer:
+        text: "[¿Quién escribe estos posts?](/sobre-mi)"
     menu:
       main:
+        - identifier: posts
+          name: Artículos
+          url: /posts/
+          weight: 9
         - identifier: categories
           name: Categorías
           url: /categories/
@@ -55,10 +63,6 @@ languages:
           name: Tags
           url: /tags/
           weight: 20
-        - identifier: sobre-mi
-          name: Sobre mi
-          url: /sobre-mi
-          weight: 30
         - identifier: contacto
           name: Contacto
           url: /contacto
@@ -78,20 +82,27 @@ languages:
     weight: 2
     params:
       description: "Software developer, maker and tech lover based in Spain. Currently stuying at 42 School"
-      profileMode:
-        enabled: true # needs to be explicitly set
+      homeInfoParams:
         title: Enrique Martínez
-        subtitle: "Software developer, maker and tech lover based in Spain. Currently stuying at 42 School"
-        imageUrl: "bio-photo.jpg"
-        imageWidth: 120
-        imageHeight: 120
-        buttons:
-          - name: Posts
-            url: posts
-          - name: Projects
-            url: categories/projects/
+        subtitle: Junior Software Engineer
+        Content: |
+          **Welcome to my blog!**
+
+          I'm Enrique, a software engineer with a unique journey from business to programming.
+
+          After discovering my passion for technology, I completed the rigorous curriculum at 42
+          School, which fueled my love for problem-solving and innovation. Now, I work in the
+          aerospace sector, contributing to projects that involve cutting-edge technology and real-world impact.
+
+          Through this blog, I share insights, experiences, and reflections from my journey in tech. Whether you’re a fellow developer, a tech enthusiast, or simply curious, I hope you'll find value and inspiration here!
+      footer:
+        text: "[Who's behind these posts?](/about-me)"
     menu:
       main:
+        - identifier: Posts
+          name: Posts
+          url: /posts/
+          weight: 9
         - identifier: categories
           name: Categories
           url: /categories/
@@ -100,10 +111,6 @@ languages:
           name: Tags
           url: /tags/
           weight: 20
-        - identifier: about-me
-          name: About me
-          url: /about-me
-          weight: 30
         - identifier: contact
           name: Contact
           url: /contact
@@ -150,9 +157,7 @@ params:
     safari_pinned_tab: "safari-pinned-tab.svg"
 
   label:
-    text: "Enrique Martínez"
-    icon: apple-touch-icon.png
-    iconHeight: 24
+    text: "Home"
 
   socialIcons:
     - name: twitter
@@ -160,7 +165,7 @@ params:
     - name: github
       url: "https://github.com/emartinez-dev"
     - name: linkedin
-      url: "https://www.linkedin.com/in/f-enrique-martinez/"
+      url: "https://www.linkedin.com/in/francisco-enrique-martinez/"
 
   analytics:
     google:
