@@ -1,5 +1,6 @@
 baseURL: "https://emartinez.net/"
-paginate: 5
+pagination:
+  pagerSize: 5
 theme: PaperMod
 
 enableRobotsTXT: true
@@ -115,7 +116,8 @@ params:
   env: production
   keywords: [Blog, Portfolio, Developer, Maker, Tech blog]
   author: Enrique Martínez
-  images: "./static/bio-photo.jpg"
+  images: 
+    - "./static/bio-photo.jpg"
   DateFormat: "2 January, 2006"
   defaultTheme: auto
   disableThemeToggle: false
