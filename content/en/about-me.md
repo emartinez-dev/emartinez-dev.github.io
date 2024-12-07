@@ -1,6 +1,6 @@
 ---
 title: "About me"
-date: 2023-10-10T13:43:36+02:00
+date: 2024-12-07T14:43:36+02:00
 draft: false
 ---
 
@@ -20,7 +20,7 @@ myself in this environment, I mastered foundational programming concepts like
 Git, Unix systems, and C, while also learning the importance of collaboration
 and self-driven learning.
 
-By mid-2023, I transitioned into software development professionally, and today,
+By early-2024, I transitioned into software development professionally, and today,
 I focus on building reliable, impactful software in the aerospace industry. Over
 the past year, I've deepened my skills in Python, Vue.js, and other
 technologies, while constantly learning and contributing to meaningful projects.
