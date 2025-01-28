@@ -284,23 +284,24 @@ c->aspect_ratio = w->m_width / (double)w->m_height;
 c->fov = tan(to_radians(c->h_fov) / 2.0);
 ```
 
----------- TODO: me quedo por aquí
-
 ### Generación de rayos
 
 #### Dirección del rayo por píxel
 
-Cada píxel en la pantalla representa un punto en un plano virtual de proyección. Calculamos la dirección del rayo en el espacio de la cámara basándonos en las coordenadas del píxel (`x`, `y`) y los parámetros de la cámara como el **campo de visión horizontal** (`h_fov`) y la relación de aspecto.
+Cada píxel en la pantalla representa un punto en un plano virtual de proyección. Calculamos la
+dirección del rayo en el espacio de la cámara basándonos en las coordenadas del píxel (`x`, `y`)
+y los parámetros de la cámara como el **campo de visión** (`fov`), que hemos calculado en el paso
+anterior, y la relación de aspecto.
 
 ```c
-w = (2 * ((x + 0.5) / win->m_width) - 1) * c->aspect_ratio * c->fov;
-h = (1 - 2 * ((y + 0.5) / win->m_height)) * c->fov;
-return ((t_v3){w, h, 1});
+	w = (2 * ((x + 0.5) / win->m_width) - 1) * c->aspect_ratio * c->fov;
+	h = (1 - 2 * ((y + 0.5) / win->m_height)) * c->fov;
 ```
 
-#### Transformación al Espacio Global**
+#### Transformación al sistema de coordenadas global
 
-Usamos la matriz de rotación y traslación de la cámara para transformar la dirección calculada en el espacio de la cámara al espacio global. Finalmente, normalizamos la dirección del rayo.
+Usamos la matriz de rotación y traslación de la cámara para transformar la dirección calculada en
+el espacio de la cámara al espacio global. Finalmente, normalizamos la dirección del rayo.
 
 ```c
 cam_ray.origin = c->p;
