@@ -1,4 +1,6 @@
 name: Sync CV PDF from private repo
+permissions:
+  contents: write
 
 on:
   workflow_dispatch: {}
