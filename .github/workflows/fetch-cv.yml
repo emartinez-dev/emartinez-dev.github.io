@@ -1,0 +1,58 @@
+name: Sync CV PDF from private repo
+
+on:
+  workflow_dispatch: {}
+  schedule:
+    - cron: '0 3 * * 1' # weekly on Monday at 03:00 UTC (adjust if needed)
+
+env:
+  CV_OWNER: emartinez-dev
+  CV_REPO: cv
+  DEST_PATH: static/cv_public.pdf
+  ASSET_NAME: cv_public.pdf
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout site repo
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Install jq
+        run: sudo apt-get update && sudo apt-get install -y jq
+
+      - name: Get latest release and find asset id
+        id: get
+        run: |
+          set -eux
+          resp=$(curl -s -H "Authorization: token ${{ secrets.CV_REPO_PAT }}" "https://api.github.com/repos/${CV_OWNER}/${CV_REPO}/releases/latest")
+          echo "$resp" > release.json
+          asset_id=$(echo "$resp" | jq -r --arg NAME "${ASSET_NAME}" '.assets[] | select(.name==$NAME) | .id')
+          if [ -z "$asset_id" ] || [ "$asset_id" = "null" ]; then
+            echo "Asset ${ASSET_NAME} not found in latest release." >&2
+            cat release.json >&2
+            exit 1
+          fi
+          echo "asset_id=$asset_id" >> $GITHUB_OUTPUT
+
+      - name: Download asset
+        run: |
+          mkdir -p $(dirname "${DEST_PATH}")
+          curl -L -H "Accept: application/octet-stream" -H "Authorization: token ${{ secrets.CV_REPO_PAT }}" \
+            "https://api.github.com/repos/${CV_OWNER}/${CV_REPO}/releases/assets/${{ steps.get.outputs.asset_id }}" \
+            -o "${DEST_PATH}"
+
+      - name: Commit and push updated PDF
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add "${DEST_PATH}"
+          git commit -m "Update CV (fetched from ${CV_OWNER}/${CV_REPO} latest release)" || echo "No changes to commit"
+          git push
+
+# Notes:
+# - This workflow requires a repository secret named CV_REPO_PAT containing a PAT with access to the private repo `emartinez-dev/cv` (repo scope).
+# - The workflow checks the latest release in that repo and downloads the asset named `cv_public.pdf`.
+# - The downloaded file is written to `static/cv_public.pdf` so it will be served by Hugo/GitHub Pages at `/cv_public.pdf`.

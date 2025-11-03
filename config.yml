@@ -63,6 +63,10 @@ languages:
           name: Tags
           url: /tags/
           weight: 20
+        - identifier: cv
+          name: CV
+          url: /cv
+          weight: 35
         - identifier: contacto
           name: Contacto
           url: /contacto
@@ -111,6 +115,10 @@ languages:
           name: Tags
           url: /tags/
           weight: 20
+        - identifier: cv
+          name: Resume
+          url: /resume
+          weight: 35
         - identifier: contact
           name: Contact
           url: /contact
