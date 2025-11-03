@@ -115,7 +115,7 @@ languages:
           name: Tags
           url: /tags/
           weight: 20
-        - identifier: cv
+        - identifier: resume
           name: Resume
           url: /resume
           weight: 35
